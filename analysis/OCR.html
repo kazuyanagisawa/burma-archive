@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Analysis: OCR</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="nav">
+<div class="nav-container">
+<div class="site-title">Voices Under Fire</div>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="archive.html">Archive</a>
+<a href="analysis.html">AI Analysis</a>
+<a href="argument.html">Argument</a>
+<a href="sources.html">Sources</a>
+</nav>
+</div>
+</header>
+
+<section class="content">
+
+<h1>OCR Analysis</h1>
+
+<p>
+This section evaluates how optical character recognition performed on a handwritten letter written by Karen medic New Gay while recovering from severe injuries after a Burma Air Force firebomb attack. Because the letter is handwritten, emotionally significant, and linguistically irregular, it provided a strong test case for whether AI could reliably recover fragile testimony from conflict.
+</p>
+
+<h2>Artifact Used</h2>
+
+<p>
+The artifact is a handwritten letter addressed to the “FBR family.” Written while the author was physically unable to speak, the letter expresses gratitude toward caregivers, reflects on recovery, and mourns the loss of a friend. It is therefore both a practical OCR challenge and an ethically significant object within the archive.
+</p>
+
+<img src="assets/images/A03_handwritten_letter_OCR_output.png" alt="Handwritten letter written by Karen medic New Gay while recovering from severe injuries." class="analysis-image">
+
+<h2>Why OCR Was Used</h2>
+
+<p>
+OCR was used to test whether machine reading could help recover handwritten testimony for digital archiving. In theory, OCR can accelerate transcription and make fragile texts searchable. In practice, handwritten documents from conflict settings often resist clean extraction because of uneven handwriting, non-standard grammar, image quality issues, and the emotional urgency of the writing situation.
+</p>
+
+<h2>Ground Truth Transcription</h2>
+
+<p>
+To evaluate OCR performance, a corrected manual transcription was established as the reference text. This created a human-verified baseline against which model outputs could be compared.
+</p>
+
+<div class="analysis-box">
+<h3>Reference Text Excerpt</h3>
+<p>
+“Dear, I thank you so much for you remember me in your prayers, encouraging speech and support me, so I thank you all.”
+</p>
+<p>
+“Just now I can eat, I can walk, and I can talk slow slow.”
+</p>
+<p>
+“Finally, God will fill full my dear FBR’s needs and want to do anything be success, is my prayer in Jesus’ name. Amen.”
+</p>
+</div>
+
+<h2>OCR Outputs</h2>
+
+<h3>Tesseract</h3>
+<div class="analysis-box">
+<p><strong>Word Error Rate:</strong> 93.28%</p>
+<p><strong>Character Error Rate:</strong> 93.28%</p>
+<pre>
+dio my deo.a B® peinlly.
+ale 4aist Teed. vol bloss ot ip a Paei
+——— 10th you. alvaays 8 nany hope ana pacie
+</pre>
+</div>
+
+<h3>Gemini 2.5 Flash</h3>
+<div class="analysis-box">
+<p><strong>Word Error Rate:</strong> 32.02%</p>
+<p><strong>Character Error Rate:</strong> 12.69%</p>
+<pre>
+Hello. My dear FBR family
+At first God will bless you and keep going
+with you always & my hope and pray.
+</pre>
+</div>
+
+<h3>Gemini 3.1 Pro Preview</h3>
+<div class="analysis-box">
+<p><strong>Word Error Rate:</strong> 30.43%</p>
+<p><strong>Character Error Rate:</strong> 10.40%</p>
+<pre>
+Hello. My dear FBR family
+At frist God will bless you and keep going
+with you always is my hope and pray.
+</pre>
+</div>
+
+<h2>Best Performer</h2>
+
+<p>
+Among the tested systems, Gemini 3.1 Pro Preview performed best. It did not produce a perfect transcription, but it recovered substantially more of the letter’s structure, vocabulary, and emotional content than Tesseract. Tesseract’s output was largely unusable for archival purposes without extensive correction.
+</p>
+
+<h2>Interpretation</h2>
+
+<p>
+The OCR results show that model choice matters enormously when working with handwritten humanitarian testimony. A weak OCR result does not merely introduce small errors. It can obscure the emotional logic of the document and erase key elements such as gratitude, bodily recovery, and mourning. In this case, the strongest model made the artifact much more legible, but human correction remained essential.
+</p>
+
+<p>
+This matters for the archive because machine readability is not the same as archival recovery. OCR can assist in making testimony searchable and analyzable, but it cannot be treated as a neutral or complete extraction process. The letter’s meaning only becomes fully clear when AI output is checked against the image itself and interpreted through human close reading.
+</p>
+
+<h2>Conclusion</h2>
+
+<p>
+For this archive, OCR is useful as a support tool rather than a replacement for transcription. The handwritten letter demonstrates that AI can help recover fragile texts, but also that archival accuracy and ethical interpretation still depend on human verification.
+</p>
+
+<p><a href="analysis.html">← Back to AI Analysis</a></p>
+
+</section>
+
+<footer>
+<p>Digital Humanities Archive Project</p>
+</footer>
+
+</body>
+</html>
