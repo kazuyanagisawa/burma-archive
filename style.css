@@ -106,6 +106,16 @@ justify-content:space-between;
 align-items:center;
 }
 
+.site-title{
+color:#ddd;
+text-decoration:none;
+margin-left:0;
+}
+
+.site-title:hover{
+color:white;
+}
+
 .nav a{
 color:#ddd;
 margin-left:15px;
