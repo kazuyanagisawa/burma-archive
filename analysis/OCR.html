@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <title>AI Analysis: OCR</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
-
+ 
 <header class="nav">
 <div class="nav-container">
 <div class="site-title">Voices Under Fire</div>
 <nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="archive.html">Archive</a>
-<a href="analysis.html">AI Analysis</a>
-<a href="argument.html">Argument</a>
-<a href="sources.html">Sources</a>
+<a href="../index.html">Home</a>
+<a href="../about.html">About</a>
+<a href="../archive.html">Archive</a>
+<a href="../analysis.html">AI Analysis</a>
+<a href="../argument.html">Argument</a>
+<a href="../sources.html">Sources</a>
 </nav>
 </div>
 </header>
@@ -36,7 +36,9 @@ This section evaluates how optical character recognition performed on a handwrit
 The artifact is a handwritten letter addressed to the “FBR family.” Written while the author was physically unable to speak, the letter expresses gratitude toward caregivers, reflects on recovery, and mourns the loss of a friend. It is therefore both a practical OCR challenge and an ethically significant object within the archive.
 </p>
 
-<img src="assets/images/A03_handwritten_letter_OCR_output.png" alt="Handwritten letter written by Karen medic New Gay while recovering from severe injuries." class="analysis-image">
+<div class="analysis-image-wrapper">
+<img src="../assets/images/A03_handwritten_letter_OCR_output.png" alt="Three-panel visualization showing the original handwritten letter, a grayscale version used for preprocessing, and a binarized black-and-white version prepared for optical character recognition." class="analysis-image">
+</div>
 
 <h2>Why OCR Was Used</h2>
 
@@ -47,56 +49,69 @@ OCR was used to test whether machine reading could help recover handwritten test
 <h2>Ground Truth Transcription</h2>
 
 <p>
-To evaluate OCR performance, a corrected manual transcription was established as the reference text. This created a human-verified baseline against which model outputs could be compared.
+To evaluate OCR performance, a corrected manual transcription was established as the reference text. Paired with the original artifact, it serves as a human-verified comparison partner against which model outputs can be judged.
 </p>
 
-<div class="analysis-box">
-<h3>Reference Text Excerpt</h3>
+<div class="comparison-grid">
+
+<div class="comparison-artifact">
+<h3>Original Artifact</h3>
+<img src="../assets/images/A03_image_handwritten_letter_artifact1_raw.avif" alt="Handwritten letter on lined spiral notebook paper written by Karen medic New Gay while recovering from severe injuries." class="artifact-compare-image">
+</div>
+
+<div class="comparison-text">
+<h3>Comparison Partner: Ground Truth Transcription</h3>
 <p>
-“Dear, I thank you so much for you remember me in your prayers, encouraging speech and support me, so I thank you all.”
+Dear, I thank you so much for you remember me in your prayers, encouraging speech and support me, so I thank you all.
 </p>
 <p>
-“Just now I can eat, I can walk, and I can talk slow slow.”
+I am not your general but you love me like your real sister so I thank God he send me to you. God will be happy for what you did for me.
 </p>
 <p>
-“Finally, God will fill full my dear FBR’s needs and want to do anything be success, is my prayer in Jesus’ name. Amen.”
+Just now I can eat, I can walk, and I can talk slow slow.
 </p>
+<p>
+Finally, God will fill full my dear FBR’s needs and want to do anything be success, is my prayer in Jesus’ name. Amen.
+</p>
+</div>
+
 </div>
 
 <h2>OCR Outputs</h2>
 
-<h3>Tesseract</h3>
-<div class="analysis-box">
-<p><strong>Word Error Rate:</strong> 93.28%</p>
-<p><strong>Character Error Rate:</strong> 93.28%</p>
-<pre>
-dio my deo.a B® peinlly.
-ale 4aist Teed. vol bloss ot ip a Paei
-——— 10th you. alvaays 8 nany hope ana pacie
-</pre>
-</div>
-
-<h3>Gemini 2.5 Flash</h3>
-<div class="analysis-box">
-<p><strong>Word Error Rate:</strong> 32.02%</p>
-<p><strong>Character Error Rate:</strong> 12.69%</p>
-<pre>
-Hello. My dear FBR family
-At first God will bless you and keep going
-with you always & my hope and pray.
-</pre>
-</div>
-
-<h3>Gemini 3.1 Pro Preview</h3>
-<div class="analysis-box">
-<p><strong>Word Error Rate:</strong> 30.43%</p>
-<p><strong>Character Error Rate:</strong> 10.40%</p>
-<pre>
-Hello. My dear FBR family
-At frist God will bless you and keep going
-with you always is my hope and pray.
-</pre>
-</div>
+<table class="ocr-table">
+<thead>
+<tr>
+<th>Model</th>
+<th><strong>WER</strong></th>
+<th><strong>CER</strong></th>
+<th>Output Excerpt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tesseract</strong></td>
+<td>93.28%</td>
+<td>93.28%</td>
+<td><pre>dio my deo.a B® peinlly.
+ale 4aist Teed. vol bloss ot ip a Paei</pre></td>
+</tr>
+<tr>
+<td><strong>Gemini 2.5 Flash</strong></td>
+<td>32.02%</td>
+<td>12.69%</td>
+<td><pre>Hello. My dear FBR family
+At first God will bless you and keep going</pre></td>
+</tr>
+<tr>
+<td><strong>Gemini 3.1 Pro Preview</strong></td>
+<td>30.43%</td>
+<td>10.40%</td>
+<td><pre>Hello. My dear FBR family
+At frist God will bless you and keep going</pre></td>
+</tr>
+</tbody>
+</table>
 
 <h2>Best Performer</h2>
 
@@ -120,7 +135,11 @@ This matters for the archive because machine readability is not the same as arch
 For this archive, OCR is useful as a support tool rather than a replacement for transcription. The handwritten letter demonstrates that AI can help recover fragile texts, but also that archival accuracy and ethical interpretation still depend on human verification.
 </p>
 
-<p><a href="analysis.html">← Back to AI Analysis</a></p>
+<p>
+Once text has been recovered through OCR and manually corrected, it becomes machine-readable data that can support additional computational analysis. In this project, the corrected transcription was later used for sentiment analysis to examine how expressions of gratitude, grief, faith, and recovery appear across the testimony. See the <a href="../analysis/sentiment.html">Sentiment Analysis section</a> for further analysis built from this digitized text.
+</p>
+
+<p><a href="../analysis.html">← Back to AI Analysis</a></p>
 
 </section>
 
