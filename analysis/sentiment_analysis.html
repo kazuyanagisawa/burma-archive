@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Analysis: Sentiment</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+.sentiment-arc-image{
+max-width:1001px;
+width:100%;
+height:auto;
+display:block;
+margin:0 auto;
+}
+</style>
+</head>
+
+<body>
+
+<header class="nav">
+<div class="nav-container">
+<a class="site-title" href="../index.html">Voices Under Fire</a>
+<nav>
+<a href="../about.html">About</a>
+<a href="../archive.html">Archive</a>
+<a href="../analysis.html">AI Analysis</a>
+<a href="../argument.html">Argument</a>
+<a href="../sources.html">Sources</a>
+</nav>
+</div>
+</header>
+
+<section class="content">
+
+<h1>Sentiment Analysis</h1>
+
+<p>
+This page examines emotional patterns across several artifacts in the archive using computational sentiment analysis. Close reading remains the primary method, but automated scoring can still reveal patterns that are easy to miss on first pass.
+</p>
+
+<p>
+Four artifacts were analyzed: a protest song, a field interview with Free Burma Rangers medics, a handwritten recovery letter, and a testimony recorded during a day of prayer gathering. Each text was divided into sentences and scored using the VADER sentiment model. Gemini 2.5 Flash Lite was also used to classify sentences as positive, negative, or neutral.
+</p>
+
+<p>
+The light blue lines in the charts represent sentence-level sentiment scores. The orange line represents a rolling average used to smooth short fluctuations and reveal the broader emotional trajectory of each text.
+</p>
+
+
+<h2>Method and Quantitative Results</h2>
+
+<p>
+The four texts vary significantly in length, ranging from 17 sentences in the handwritten letter to 124 sentences in the day of prayer testimony. Average sentiment and agreement between the two models differed across the artifacts.
+</p>
+
+<table class="ocr-table">
+<thead>
+<tr>
+<th>Artifact</th>
+<th>Sentences</th>
+<th>Avg VADER Score</th>
+<th>Gemini–VADER Agreement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Joy and Pain Interview</td>
+<td>70</td>
+<td>-0.0223</td>
+<td>0.7143</td>
+</tr>
+<tr>
+<td>Day of Prayer Testimony</td>
+<td>124</td>
+<td>0.0608</td>
+<td>0.7419</td>
+</tr>
+<tr>
+<td>Handwritten Recovery Letter</td>
+<td>17</td>
+<td>0.4628</td>
+<td>0.8235</td>
+</tr>
+<tr>
+<td>Kabar Ma Kyay Bu Protest Song</td>
+<td>37</td>
+<td>0.0923</td>
+<td>0.5946</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+The handwritten letter produced the most positive average sentiment and the highest agreement between the two systems. The protest song produced the lowest agreement, suggesting that symbolic or lyrical language is harder for sentiment models to interpret consistently. The interview was the only artifact with a slightly negative average score, reflecting how often the speakers describe suffering and displacement.
+</p>
+
+
+<h2>Protest Song</h2>
+
+<div class="analysis-image-wrapper">
+<img src="../assets/images/A01_chart_sentiment_arc.png" alt="Sentiment arc of the protest song Kabar Ma Kyay Bu." class="analysis-image sentiment-arc-image">
+</div>
+
+<p>
+The protest song Kabar Ma Kyay Bu shows sharp emotional shifts from line to line. Lyrics often combine grief, anger, and patriotic determination within the same phrases, which produces wide swings in the sentence-level scores.
+</p>
+
+<p>
+Even so, the smoothed trend remains slightly positive overall. The song contains 37 sentences with an average VADER score of 0.0923 and the lowest agreement rate between the two systems. This disagreement likely reflects how symbolic language and metaphor complicate automated sentiment scoring.
+</p>
+
+<p>
+The pattern reflects the role of protest music in resistance movements. References to violence and loss appear alongside lines about unity and remembrance, producing an emotional arc that moves between grief and determination.
+</p>
+
+
+<h2>Handwritten Recovery Letter</h2>
+
+<div class="analysis-image-wrapper">
+<img src="../assets/images/A03_chart_sentiment_arc.png" alt="Sentiment arc of the handwritten recovery letter." class="analysis-image sentiment-arc-image">
+</div>
+
+<p>
+The handwritten letter shows the clearest emotional structure in the dataset. The early sentences express gratitude, faith, and relief during recovery, producing the strongest positive average sentiment score.
+</p>
+
+<p>
+The letter contains 17 sentences and produced both the highest average VADER score (0.4628) and the strongest agreement rate between Gemini and VADER. This likely reflects the direct emotional language used throughout the text.
+</p>
+
+<p>
+Later in the letter the tone shifts when the author mourns the death of a friend. This introduces a brief moment of grief before the letter returns to a more reflective tone near the end.
+</p>
+
+<p>
+The numbers only show part of the story. Reading the letter directly gives fuller context for the testimony. Naw Gay wrote it while recovering from catastrophic violence and severe physical injury. In that setting, expressions of gratitude, prayer, and concern for others carry meaning that cannot be captured by a positive value on a sentiment graph alone.
+</p>
+
+
+<h2>Field Interview</h2>
+
+<div class="analysis-image-wrapper">
+<img src="../assets/images/A02_chart_joyandpain_sentiment_arc.png" alt="Sentiment arc of the Joy and Pain interview." class="analysis-image sentiment-arc-image">
+</div>
+
+<p>
+The Joy and Pain interview produces a more uneven emotional pattern. Sentence scores shift rapidly as the speakers move between describing violence, displacement, and their work caring for others.
+</p>
+
+<p>
+The interview contains 70 sentences and has a slightly negative average score of −0.0223. This reflects how often the speakers describe suffering, even while explaining their mission and expressing hope.
+</p>
+
+<p>
+When the scores are smoothed, the pattern becomes clearer. The middle portion trends more negative as the speakers describe violence and hardship. Toward the end the sentiment rises again as they emphasize purpose and service.
+</p>
+
+
+<h2>Day of Prayer Testimony</h2>
+
+<div class="analysis-image-wrapper">
+<img src="../assets/images/A13_chart_day_of_prayer_sentiment_arc.png" alt="Sentiment arc of the day of prayer testimony." class="analysis-image sentiment-arc-image">
+</div>
+
+<p>
+The day of prayer testimony contains the largest number of sentences and produces the most detailed emotional arc. Descriptions of violence and displacement create negative spikes, while expressions of faith and solidarity create positive ones.
+</p>
+
+<p>
+The testimony remains slightly positive, with an average score of 0.0608. The smoothed arc rises toward the end of the text, suggesting a narrative movement from hardship toward collective encouragement and prayer.
+</p>
+
+
+<h2>Interpretation</h2>
+
+<p>
+Across the archive, many artifacts move between suffering and hope. Negative spikes tend to appear when violence or loss is described, while positive spikes appear when speakers express faith, solidarity, or recovery.
+</p>
+
+<p>
+The results also show that genre matters. Direct personal writing, such as the recovery letter, is easier for sentiment models to classify. More symbolic language, like protest songs, produces more disagreement between systems.
+</p>
+
+<p>
+Sentiment analysis works best as a supporting tool rather than a final interpretation. The charts highlight patterns, but understanding those patterns still requires direct engagement with the artifacts.
+</p>
+
+
+<h2>Conclusion</h2>
+
+<p>
+Sentiment analysis makes it possible to visualize emotional patterns across texts that differ in length and form. It highlights recurring movements between grief, resilience, and faith across the archive.
+</p>
+
+<p>
+Emotional meaning cannot be reduced to numerical scores. The most useful role of these tools is to direct attention back to testimony, where the people and experiences behind the archive remain central.
+</p>
+
+<p><a href="../analysis.html">← Back to AI Analysis</a></p>
+
+</section>
+
+<footer>
+<p>Digital Humanities Archive Project</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Analysis: Transcription</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="nav">
+<div class="nav-container">
+<a class="site-title" href="../index.html">Voices Under Fire</a>
+<nav>
+<a href="../about.html">About</a>
+<a href="../archive.html">Archive</a>
+<a href="../analysis.html">AI Analysis</a>
+<a href="../argument.html">Argument</a>
+<a href="../sources.html">Sources</a>
+</nav>
+</div>
+</header>
+
+<section class="content">
+
+<h1>Transcription Analysis</h1>
+
+<p>
+This page evaluates whether modern AI transcription tools can reliably convert spoken Burmese audio into English text for archival use. Two artifacts were tested: the Joy and Pain Interview, a field interview with Free Burma Rangers medics, and the protest song Kabar Ma Kyay Bu (We Will Never Forget). Both recordings contain Burmese speech and represent key oral testimony in the archive.
+</p>
+
+<p>
+Several transcription systems were tested, including OpenAI Whisper (large-v2 and large-v3), Gemini 3.5 Pro Preview, and ElevenLabs' browser-based transcription tool using the Scribe V2 model. In practice, nearly all models failed completely when processing the Burmese audio. Whisper and Gemini did not produce usable English transcription, despite documentation claiming support for Burmese speech recognition. Because no reliable automated output was produced, it was not possible to establish a meaningful ground-truth comparison with human transcription.
+</p>
+
+<p>
+The only model capable of producing partial results was ElevenLabs Scribe V2, though this required manual use of the browser interface rather than the API and still produced incomplete output. The results show a key limitation of current transcription models. Language support claims do not always translate into reliable performance in real-world archival material, particularly when recordings include accents, background noise, or humanitarian field conditions. For archival work, current tools remain unreliable for Burmese-language transcription without significant human intervention.
+</p>
+
+<p><a href="../analysis.html">← Back to AI Analysis</a></p>
+
+</section>
+
+<footer>
+<p>Digital Humanities Archive Project</p>
+</footer>
+
+</body>
+</html>

@@ -26,7 +26,7 @@
 <h1>OCR Analysis</h1>
 
 <p>
-This OCR analysis examines three handwritten artifacts in the archive. They include a handwritten letter by Karen medic New Gay and two handwritten children’s letters in Burmese. Together, these artifacts test whether AI can reliably recover fragile testimony from conflict when handwriting is uneven, language resources are limited, and human ground truth is not always available.
+This OCR analysis examines three handwritten artifacts in the archive. They include a handwritten letter by Karen medic Naw Gay and two handwritten children’s letters in Burmese. Together, these artifacts test whether AI can reliably recover fragile testimony from conflict when handwriting is uneven, language resources are limited, and human ground truth is not always available.
 </p>
 
 <h2>Artifact Used</h2>
@@ -48,14 +48,14 @@ OCR was used to test whether machine reading could help recover handwritten test
 <h2>Ground Truth Transcription</h2>
 
 <p>
-For the New Gay letter, a corrected manual transcription was established as the reference text. Paired with the original artifact, it serves as a human-verified comparison partner against which model outputs can be judged using word error rate (WER) and character error rate (CER). For the two children’s letters, no authoritative transcription was available, so performance was evaluated indirectly through pairwise comparison across model outputs and a consensus-selection method based on model agreement.
+For the Naw Gay letter, a corrected manual transcription was established as the reference text. Paired with the original artifact, it serves as a human-verified comparison partner against which model outputs can be judged using word error rate (WER) and character error rate (CER). For the two children’s letters, no authoritative transcription was available, so performance was evaluated indirectly through pairwise comparison across model outputs and a consensus-selection method based on model agreement.
 </p>
 
 <div class="comparison-grid">
 
 <div class="comparison-artifact">
 <h3>Original Artifact</h3>
-<img src="../assets/images/A03_image_handwritten_letter_artifact1_raw.avif" alt="Handwritten letter on lined spiral notebook paper written by Karen medic New Gay while recovering from severe injuries." class="artifact-compare-image">
+<img src="../assets/images/A03_image_handwritten_letter_artifact1_raw.avif" alt="Handwritten letter on lined spiral notebook paper written by Karen medic Naw Gay while recovering from severe injuries." class="artifact-compare-image">
 </div>
 
 <div class="comparison-text">
@@ -85,13 +85,13 @@ Naw Gay
 
 </div>
 
-<h2>Reference-Based OCR Results for the New Gay Letter</h2>
+<h2>Reference-Based OCR Results for the Naw Gay Letter</h2>
 
 <p>
 The English letter provided the strongest OCR test case because a manual reference text could be established. This made it possible to evaluate each model quantitatively rather than relying only on visual judgment. Tesseract produced near-total failure, while Gemini recovered most of the letter’s structure and emotional content. Gemini 3.1 Pro Preview performed best overall.
 </p>
 
-<h2>OCR Outputs for the New Gay Letter</h2>
+<h2>OCR Outputs for the Naw Gay Letter</h2>
 
 <table class="ocr-table">
 <thead>
@@ -218,13 +218,13 @@ Using the same medoid-based consensus method, Letter 2 selected Gemini 3.1 Pro w
 <h2>Best Performer</h2>
 
 <p>
-Across all handwritten artifacts, Gemini clearly outperformed Tesseract. For the New Gay letter, Gemini 3.1 Pro Preview produced the lowest WER and CER and recovered substantially more of the letter’s structure, vocabulary, and emotional content than Tesseract. For the children’s letters, Gemini also produced the only usable Burmese outputs. However, the children’s letters showed that better output does not always mean stable or reliable output. One letter remained highly unstable across Gemini variants, while the other showed strong convergence and therefore higher confidence.
+Across all handwritten artifacts, Gemini clearly outperformed Tesseract. For the Naw Gay letter, Gemini 3.1 Pro Preview produced the lowest WER and CER and recovered substantially more of the letter’s structure, vocabulary, and emotional content than Tesseract. For the children’s letters, Gemini also produced the only usable Burmese outputs. However, the children’s letters showed that better output does not always mean stable or reliable output. One letter remained highly unstable across Gemini variants, while the other showed strong convergence and therefore higher confidence.
 </p>
 
 <h2>Interpretation</h2>
 
 <p>
-The OCR results show that model choice matters enormously when working with handwritten humanitarian testimony. A weak OCR result does not merely introduce small errors. It can obscure the emotional logic of a document and erase key elements such as gratitude, bodily recovery, mourning, or fear. In the New Gay letter, Gemini made the text far more legible than Tesseract, but human correction remained essential.
+The OCR results show that model choice matters enormously when working with handwritten humanitarian testimony. A weak OCR result does not merely introduce small errors. It can obscure the emotional logic of a document and erase key elements such as gratitude, bodily recovery, mourning, or fear. In the Naw Gay letter, Gemini made the text far more legible than Tesseract, but human correction remained essential.
 </p>
 
 <p>
@@ -238,7 +238,7 @@ This matters for the archive because machine readability is not the same as arch
 <h2>Conclusion</h2>
 
 <p>
-For this archive, OCR is useful as a support tool rather than a replacement for transcription. The New Gay letter demonstrates that AI can help recover fragile handwritten testimony when a human can verify and correct the results. The children’s letters show that when no ground truth exists, OCR can still provide provisional access, but only if uncertainty is documented and model agreement is used as a confidence check. OCR is therefore valuable for archival workflows, but not yet reliable enough to be trusted without human oversight.
+For this archive, OCR is useful as a support tool rather than a replacement for transcription. The Naw Gay letter demonstrates that AI can help recover fragile handwritten testimony when a human can verify and correct the results. The children’s letters show that when no ground truth exists, OCR can still provide provisional access, but only if uncertainty is documented and model agreement is used as a confidence check. OCR is therefore valuable for archival workflows, but not yet reliable enough to be trusted without human oversight.
 </p>
 
 <p>

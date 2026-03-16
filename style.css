@@ -213,8 +213,7 @@ grid-template-columns:repeat(2,minmax(0,1fr));
 }
 
 .image-group,
-.letter-group,
-.map-group{
+.letter-group{
 grid-template-columns:repeat(3,minmax(0,1fr));
 }
 
@@ -250,6 +249,23 @@ display:flex;
 align-items:center;
 justify-content:center;
 font-size:48px;
+}
+
+.video-thumb{
+position:relative;
+width:35%;
+margin:0;
+}
+
+.video-thumb img{
+display:block;
+}
+
+.video-thumb .artifact-icon{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.35);
+font-size:64px;
 }
 
 .artifact-divider{
@@ -291,7 +307,6 @@ color:#aaa;
 .text-group,
 .image-group,
 .letter-group,
-.map-group,
 .bio-grid{
 grid-template-columns:repeat(2,minmax(0,1fr));
 }
@@ -302,7 +317,6 @@ grid-template-columns:repeat(2,minmax(0,1fr));
 .text-group,
 .image-group,
 .letter-group,
-.map-group,
 .bio-grid{
 grid-template-columns:1fr;
 }
