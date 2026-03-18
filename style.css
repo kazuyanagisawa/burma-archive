@@ -10,8 +10,22 @@ p{
 font-size:14pt;
 }
 
+a{
+color:#66CCFF;
+text-decoration:none;
+}
+
+a:hover{
+color:#99E0FF;
+text-decoration:underline;
+}
+
+a:visited{
+color:#66CCFF;
+}
+
 .video-group{
-grid-template-columns:1fr;
+grid-template-columns:repeat(2,minmax(0,1fr));
 }
 
 .modal{
@@ -118,6 +132,7 @@ margin-left:0;
 
 .site-title:hover{
 color:white;
+text-decoration:none;
 }
 
 .nav a{
@@ -128,6 +143,7 @@ text-decoration:none;
 
 .nav a:hover{
 color:white;
+text-decoration:none;
 }
 
 .hero{
@@ -201,6 +217,12 @@ margin-right:10px;
 text-decoration:none;
 }
 
+.button:hover,
+.button:visited{
+color:black;
+text-decoration:none;
+}
+
 .artifact-group{
 display:grid;
 gap:24px;
@@ -224,6 +246,13 @@ padding:16px;
 text-decoration:none;
 color:white;
 border-radius:4px;
+}
+
+.artifact-card:link,
+.artifact-card:visited,
+.artifact-card:hover{
+color:white;
+text-decoration:none;
 }
 
 .artifact-card h3{
